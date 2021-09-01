@@ -21,8 +21,8 @@ jobs:
     - name: Rust version
       run: rustc --version
     
-    - name: Build
-      run: cargo build --release
+    #- name: Build
+    #  run: cargo build --release
       
     - name: Go to root
       run: cd
@@ -34,7 +34,7 @@ jobs:
       run: git clone https://github.com/frame-lang/framepiler_tests.git
     
     - name: Go to tests
-      run: cd framepiler_tests
+      run: cd ./framepiler_tests
       
     - name: Current Directory name
       run: pwd
