@@ -1,0 +1,12 @@
+/home/gaurav/frame/frame_transpiler/target/release/deps/proc_macro2-06cd94311e13a7be.rmeta: /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/lib.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/marker.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/parse.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/detection.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/fallback.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/wrapper.rs
+
+/home/gaurav/frame/frame_transpiler/target/release/deps/libproc_macro2-06cd94311e13a7be.rlib: /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/lib.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/marker.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/parse.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/detection.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/fallback.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/wrapper.rs
+
+/home/gaurav/frame/frame_transpiler/target/release/deps/proc_macro2-06cd94311e13a7be.d: /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/lib.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/marker.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/parse.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/detection.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/fallback.rs /home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/wrapper.rs
+
+/home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/lib.rs:
+/home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/marker.rs:
+/home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/parse.rs:
+/home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/detection.rs:
+/home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/fallback.rs:
+/home/gaurav/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.28/src/wrapper.rs:
