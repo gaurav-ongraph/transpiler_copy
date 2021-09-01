@@ -11,7 +11,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
-
+        
+    - name: Current Directory name
+      run: pwd
     
- 
+    - name: Go to /framec
+      run: cd ./framec
+    
+    - name: Rust version
+      run: rustc --version
+    
+    - name: Build
+      run: cargo build --release
