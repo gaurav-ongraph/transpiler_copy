@@ -23,3 +23,24 @@ jobs:
     
     - name: Build
       run: cargo build --release
+      
+    - name: Go to root
+      run: cd
+    
+    - name: Current Directory name
+      run: pwd
+      
+    - name: Clone test repo
+      run: git clone https://github.com/frame-lang/framepiler_tests.git
+    
+    - name: Go to tests
+      run: cd framepiler_tests
+      
+    - name: Current Directory name
+      run: pwd
+    
+    - name: Setup Node.js 16.x
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16.x
+        cache: 'npm'
