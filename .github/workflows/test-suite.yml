@@ -48,8 +48,5 @@ jobs:
       working-directory: ./framepiler_tests
       run: |
         pwd
-        ls -a
         cp .env.sample .env
-        ls -a
-        cat .env
-
+        echo "$HOME"
