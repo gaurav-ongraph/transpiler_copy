@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:  
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@main
       with:
         repository: gaurav-ongraph/transpiler_copy
         path: './transpiler_copy'
         
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@main
       with:
         repository: frame-lang/framepiler_tests
         path: './framepiler_tests'
