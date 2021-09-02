@@ -18,9 +18,21 @@ jobs:
     - name: Go to /framec
       run: cd ./framec
     
+    - name: Current Directory name
+      run: pwd
+
     - name: Rust version
       run: rustc --version
-    
+      
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: frame-lang/framepiler_tests
+        path: './framepiler_tests'
+  
+    - name: Current Directory name
+      run: pwd
+  
     #- name: Build
     #  run: cargo build --release
       
