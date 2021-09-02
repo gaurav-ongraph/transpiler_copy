@@ -40,7 +40,10 @@ jobs:
 
     - name: Install dependencies
       working-directory: ./framepiler_tests
-      run: npm install
+      run: |
+        pwd
+        node -v
+        npm install
       
     - name: Run the Test Suite
       working-directory: ./framepiler_tests
