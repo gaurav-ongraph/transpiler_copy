@@ -51,4 +51,5 @@ jobs:
         ls -a
         cp .env.sample .env
         ls -a
+        cat .env
 
