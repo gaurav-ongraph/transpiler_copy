@@ -10,13 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: gaurav-ongraph/transpiler_copy
+        path: './transpiler_copy'
         
     - name: Current Directory name
       run: pwd
     
     - name: Build
-      working-directory: ./framec
+      working-directory: ./transpiler_copy/framec
       run: pwd
     
     - name: Current Directory name
