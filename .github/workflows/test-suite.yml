@@ -56,7 +56,7 @@ jobs:
       run: ls -t
 
     - name: Copy framec to test suite
-      run: cp .transpiler_copy/target/release/framec /home/runner/work/framepiler_tests
+      run: cp ./transpiler_copy/target/release/framec /home/runner/work/framepiler_tests
       
     - name: Check frmaec 2
       working-directory: ./framepiler_tests
