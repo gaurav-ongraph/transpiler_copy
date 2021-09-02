@@ -9,13 +9,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:  
-    - uses: actions/checkout@main
+    steps:
+    - name: Clone transpiler_copy
+      uses: actions/checkout@v2
       with:
         repository: gaurav-ongraph/transpiler_copy
         path: './transpiler_copy'
         
-    - uses: actions/checkout@main
+    - name: Clone framepiler_tests
+      uses: actions/checkout@v2
       with:
         repository: frame-lang/framepiler_tests
         path: './framepiler_tests'
@@ -23,22 +25,14 @@ jobs:
     - name: Current Directory name
       run: pwd
     
-    - name: Build
+    - name: Build the transpiler
       working-directory: ./transpiler_copy/framec
-      run: pwd
+      run:  |
+        pwd
+        rustc --version
+        cargo build --release
+        
     
-    - name: Current Directory name
-      run: pwd
-
-    - name: Rust version
-      run: rustc --version
-      
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        repository: frame-lang/framepiler_tests
-        path: './framepiler_tests'
-  
     - name: Current Directory name
       run: pwd
   
@@ -53,13 +47,6 @@ jobs:
       
 #     - name: Clone test repo
 #       run: git clone https://github.com/frame-lang/framepiler_tests.git
-    
-    - name: Go to tests
-      working-directory: ./framec
-      run: cd ./framepiler_tests
-      
-    - name: Current Directory name
-      run: pwd
     
     - name: Setup Node.js 16.x
       uses: actions/setup-node@v2
