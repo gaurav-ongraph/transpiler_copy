@@ -19,7 +19,7 @@ jobs:
       working-directory: ./framec
       run: |
         pwd
-        cargo build --release
+#        cargo build --release
     
     - name: Current Directory name
       run: pwd
@@ -31,7 +31,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: frame-lang/framepiler_tests
-        path: '../framepiler_tests'
+        path: '../../framepiler_tests'
   
     - name: Current Directory name
       run: pwd
