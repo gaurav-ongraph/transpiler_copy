@@ -17,9 +17,7 @@ jobs:
     
     - name: Build
       working-directory: ./framec
-      run: |
-        pwd
-#        cargo build --release
+      run: pwd
     
     - name: Current Directory name
       run: pwd
