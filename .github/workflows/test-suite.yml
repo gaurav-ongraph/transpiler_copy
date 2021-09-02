@@ -25,18 +25,22 @@ jobs:
     - name: Build the transpiler
       working-directory: ./transpiler_copy/framec
       run: cargo build --release
+      
+    - name: Copy framec to test suite
+      run: cp ./transpiler_copy/target/release/framec ./framepiler_tests
     
     - name: Setup Node.js 16.x
       uses: actions/setup-node@v2
       with:
         node-version: 16.x
       
-    - name: Copy env file
-      working-directory: ./framepiler_tests
-      run: cp .env.sample .env
+#     - name: Copy env file
+#       working-directory: ./framepiler_tests
+#       run: cp .env.sample .env
 
-    - name: Copy framec to test suite
-      run: cp ./transpiler_copy/target/release/framec ./framepiler_tests
+    - name: Install dependencies
+      working-directory: ./framepiler_tests
+      run: npm install
       
     - name: Run the Test Suite
       working-directory: ./framepiler_tests
