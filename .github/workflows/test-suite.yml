@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Clone transpiler_copy
+    - name: Clone frame_transpiler
       uses: actions/checkout@v2
       with:
-        repository: gaurav-ongraph/transpiler_copy
-        path: './transpiler_copy'
+        repository: frame-lang/frame_transpiler
+        path: './frame_transpiler'
         
     - name: Clone framepiler_tests
       uses: actions/checkout@v2
@@ -22,12 +22,12 @@ jobs:
         repository: frame-lang/framepiler_tests
         path: './framepiler_tests'
 
-    - name: Build the transpiler
-      working-directory: ./transpiler_copy/framec
+    - name: Build frame_transpiler
+      working-directory: ./frame_transpiler/framec
       run: cargo build --release
       
     - name: Copy framec to test suite
-      run: cp ./transpiler_copy/target/release/framec ./framepiler_tests
+      run: cp ./frame_transpiler/target/release/framec ./framepiler_tests
     
     - name: Setup Node.js 16.x
       uses: actions/setup-node@v2
@@ -36,30 +36,21 @@ jobs:
 
     - name: Install dependencies
       working-directory: ./framepiler_tests
-      run: |
-        pwd
-        node -v
-        npm install
+      run: npm install
         
-    - name: Copy env file
+    - name: Create new .env file from .env.sample
       working-directory: ./framepiler_tests
       run: cp .env.sample .env
       
-    - name: Update .env file
+    - name: Update .env file with secrets
       working-directory: ./framepiler_tests
       run: |
         chmod +x update_env.sh
-        cat .env
         ./update_env.sh ${{ secrets.MAIL_FROM }} ${{ secrets.MAIL_TO }} ${{ secrets.MAILGUN_API_KEY }} ${{ secrets.MAILGUN_DOMAIN }}
-         cat .env
-         
+
     - name: Create temp/ folder to write temporary files
       working-directory: ./framepiler_tests
       run: mkdir temp
-      
-    - name: Chcecking .env
-      working-directory: ./framepiler_tests
-      run: cat .env
       
     - name: Run the Test Suite
       working-directory: ./framepiler_tests
