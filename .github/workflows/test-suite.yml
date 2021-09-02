@@ -48,7 +48,7 @@ jobs:
       working-directory: ./framepiler_tests
       run: |
         pwd
-        ll
+        ls -t
         cp ./.env.default ./.env
-        ll
+        ls -t
 
