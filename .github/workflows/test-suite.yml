@@ -37,21 +37,15 @@ jobs:
     - name: Install dependencies
       working-directory: ./framepiler_tests
       run: npm install
-        
-    - name: Create new .env file from .env.sample
-      working-directory: ./framepiler_tests
-      run: cp .env.sample .env
       
-    - name: Update .env file with secrets
+    - name: Setup .env file and create temp folder
       working-directory: ./framepiler_tests
       run: |
+        cp .env.sample .env
         chmod +x update_env.sh
         ./update_env.sh ${{ secrets.MAIL_FROM }} ${{ secrets.MAIL_TO }} ${{ secrets.MAILGUN_API_KEY }} ${{ secrets.MAILGUN_DOMAIN }}
-
-    - name: Create temp/ folder to write temporary files
-      working-directory: ./framepiler_tests
-      run: mkdir temp
-      
+        mkdir temp
+  
     - name: Run the Test Suite
       working-directory: ./framepiler_tests
       run: npm run prod
