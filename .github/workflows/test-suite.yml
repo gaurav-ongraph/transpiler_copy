@@ -49,6 +49,6 @@ jobs:
       run: |
         pwd
         ls -t
-        cp ./.env.default ./.env
+        cp .env.default .env
         ls -t
 
