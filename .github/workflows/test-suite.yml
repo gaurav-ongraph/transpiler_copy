@@ -33,10 +33,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16.x
-      
-#     - name: Copy env file
-#       working-directory: ./framepiler_tests
-#       run: cp .env.sample .env
 
     - name: Install dependencies
       working-directory: ./framepiler_tests
@@ -44,6 +40,18 @@ jobs:
         pwd
         node -v
         npm install
+        
+    - name: Copy env file
+      working-directory: ./framepiler_tests
+      run: cp .env.sample .env
+      
+    - name: Update .env file
+      working-directory: ./framepiler_tests
+      run: |
+        chmod +x update_env.sh
+        cat .env
+        ./update_env.sh ${{ secrets.MAIL_FROM }} ${{ secrets.MAIL_TO }} ${{ secrets.MAILGUN_API_KEY }} ${{ secrets.MAILGUN_DOMAIN }}
+         cat .env
       
     - name: Run the Test Suite
       working-directory: ./framepiler_tests
