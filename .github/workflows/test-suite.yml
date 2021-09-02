@@ -52,6 +52,14 @@ jobs:
         cat .env
         ./update_env.sh ${{ secrets.MAIL_FROM }} ${{ secrets.MAIL_TO }} ${{ secrets.MAILGUN_API_KEY }} ${{ secrets.MAILGUN_DOMAIN }}
          cat .env
+         
+    - name: Create temp/ folder to write temporary files
+      working-directory: ./framepiler_tests
+      run: mkdir temp
+      
+    - name: Chcecking .env
+      working-directory: ./framepiler_tests
+      run: cat .env
       
     - name: Run the Test Suite
       working-directory: ./framepiler_tests
