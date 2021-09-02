@@ -30,7 +30,7 @@ jobs:
       run:  |
         pwd
         rustc --version
-        cargo build --release
+   # cargo build --release
         
     
     - name: Current Directory name
@@ -52,4 +52,3 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: 16.x
-        cache: 'npm'
