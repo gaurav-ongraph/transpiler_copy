@@ -9,12 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    steps:  
+    - uses: actions/checkout@v2
       with:
         repository: gaurav-ongraph/transpiler_copy
         path: './transpiler_copy'
+        
+    - uses: actions/checkout@v2
+      with:
+        repository: frame-lang/framepiler_tests
+        path: './framepiler_tests'
         
     - name: Current Directory name
       run: pwd
