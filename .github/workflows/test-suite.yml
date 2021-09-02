@@ -1,3 +1,5 @@
+# Execute Frame test suite on any push event in the repo
+
 name: Frame Test Suite
 
 on: push
